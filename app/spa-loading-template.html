@@ -1,0 +1,63 @@
+<div id="nht-loading" class="nht-loading">
+  <div class="nht-loading__loader"></div>
+</div>
+
+<style>
+  .n-margin-b-none {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .n-margin-i-none {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .nht-loading {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .nht-loading__dark {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .nht-loading__auto {
+    @media only screen and (prefers-color-scheme: dark) {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+  }
+
+  .nht-loading__loader {
+    animation: loader 500ms cubic-bezier(.54,.24,.45,.74) infinite;
+    border: 2px solid rgba(0, 0, 0, 0.9);
+    border-right-color: rgba(255, 255, 255, 0.9);
+    border-bottom-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: block;
+    z-index: 1;
+    height: 5vh;
+    width: 5vh;
+  }
+
+  @keyframes loader {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+</style>
+
+<script>
+  let themePreference = localStorage.getItem('nht-theme');
+
+  if (themePreference) {
+    document.getElementById('nht-loading').classList.add(`nht-loading__${themePreference}`)
+  }
+</script>

@@ -1,0 +1,12 @@
+{
+  "include": [
+    "**/*.vue",
+    "**/*.ts",
+    "**/*.mts",
+    "**/*.js",
+    "**/*.mjs",
+  ],
+  "compilerOptions": {
+    "strictNullChecks": true
+  }
+}
