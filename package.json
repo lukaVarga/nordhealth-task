@@ -17,6 +17,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "prepare": "husky",
+    "semantic-release": "HUSKY=0 semantic-release",
     "test": "vitest",
     "test:coverage": "vitest run --coverage"
   },
