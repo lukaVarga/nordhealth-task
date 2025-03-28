@@ -12,6 +12,7 @@ It includes usage of:
 - semantic release versioning for standardized commit messages
 - vitest with coverage requirements for testing
 - linter
+- github actions for CI/CD (running tests and linter and publishing new semantic release version to the repo)
 
 
 ---
